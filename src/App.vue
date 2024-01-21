@@ -30,12 +30,13 @@ body {
 
 .container {
   margin: 0 auto;
+  padding: 0px 15px;
 
-  @media (max-width: 768px) {
+  @media (max-width: v.em(768)) {
     width: 100%;
   }
-  @media (min-width: 768px) {
-    max-width: 1200px;
+  @media (min-width: v.em(768)) {
+    max-width: v.rem(1230px);
   }
 }
 </style>

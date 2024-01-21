@@ -29,10 +29,10 @@ export default {
     align-items: center;
     justify-content: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: v.em(768)) {
       height: 80vh;
     }
-    @media (max-width: 768px) {
+    @media (max-width: v.em(768)) {
       height: 50vh;
     }
   }
@@ -45,11 +45,15 @@ export default {
     font-family: 'sfuid';
 
     &_title {
-      font-size: 25px;
+      font-size: v.rem(55);
+      margin-bottom: v.em(10, 55);
       font-weight: 500;
+      @media (max-width: v.em(768)) {
+        font-size: v.rem(20);
+      }
     }
     &_sub-title {
-      font-size: 14px;
+      font-size: v.rem(14);
       font-weight: 100;
     }
   }
