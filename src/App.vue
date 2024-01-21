@@ -1,27 +1,26 @@
 <script>
 import { RouterView } from 'vue-router';
 
-export default{
+export default {
   components: { RouterView },
   name: 'app',
-}
+};
 </script>
 
 <template>
-		<main>
-			<router-view></router-view>
-		</main>
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
 
-<style lang='scss'>
-@use '@/assets/styles/font' as f;
-@use '@/assets/styles/var' as v;
+<style lang="scss">
+@use '@/assets/styles/utils' as v;
 
-*{
-  transition: .2s;
+* {
+  transition: 0.2s;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,15 +28,14 @@ body{
   background-color: v.$white;
 }
 
-.container{
+.container {
   margin: 0 auto;
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     width: 100%;
   }
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
     max-width: 1200px;
   }
 }
-
 </style>

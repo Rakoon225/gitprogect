@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "FirstBlock",
+  name: 'FirstBlock',
 };
 </script>
 
@@ -8,16 +8,19 @@ export default {
   <el-block class="first" :param="'none'">
     <div class="first__container container">
       <div class="first__text">
-        <span class="first__text_title">Кто если не мы</span>
-        <span class="first__text_sub-title">веб-студия</span>
+        <span class="first__text_title"
+          >Кто если не мы</span
+        >
+        <span class="first__text_sub-title"
+          >веб-студия</span
+        >
       </div>
     </div>
   </el-block>
 </template>
 
 <style lang="scss" scoped>
-@use '@/assets/styles/var' as v;
-@use '@/assets/styles/font' as f;
+@use '@/assets/styles/utils' as v;
 
 .first {
   & {
@@ -38,9 +41,8 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-
     color: v.$white;
-    font-family: "sfuid";
+    font-family: 'sfuid';
 
     &_title {
       font-size: 25px;
