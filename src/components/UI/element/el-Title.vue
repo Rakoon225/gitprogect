@@ -21,7 +21,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '@/assets/styles/var' as v;
+@use '@/assets/styles/utils' as v;
 
 $element-sizes: (
   "main": (

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "FirstBlock",
+  name: 'FirstBlock',
 };
 </script>
 
@@ -9,8 +9,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '@/assets/styles/var' as v;
-@use '@/assets/styles/font' as f;
+@use '@/assets/styles/utils' as v;
 
 
 </style>
