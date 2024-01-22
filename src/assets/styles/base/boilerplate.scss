@@ -1,0 +1,17 @@
+@use '@/assets/styles/utils' as v;
+* {
+  transition: 0.2s;
+}
+
+body {
+  background-color: v.$white;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0px 15px;
+
+  @media (min-width: v.em(768)) {
+    max-width: v.rem(1230);
+  }
+}

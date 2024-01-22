@@ -1,42 +1,22 @@
 <script>
 import { RouterView } from 'vue-router';
+import '@/assets/styles/styles.scss';
+
+import HeaderApp from './components/HeaderApp.vue';
 
 export default {
-  components: { RouterView },
+  components: { RouterView, HeaderApp },
   name: 'app',
 };
 </script>
 
 <template>
+  <header-app />
   <main>
     <router-view></router-view>
   </main>
 </template>
 
 <style lang="scss">
-@use '@/assets/styles/utils' as v;
 
-* {
-  transition: 0.2s;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  background-color: v.$white;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0px 15px;
-
-  @media (max-width: v.em(768)) {
-    width: 100%;
-  }
-  @media (min-width: v.em(768)) {
-    max-width: v.rem(1230px);
-  }
-}
 </style>
