@@ -3,29 +3,27 @@
   transition: 0.2s;
 }
 
-
 //<<<<<
-html{
-	min-height: 100%;
+html {
+  min-height: 100%;
 }
 
 body {
   background-color: v.$white;
+  font-family: "sfuid";
   min-height: 100%;
 }
 
 .wrapper {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-	flex: 1 1 auto;
+  flex: 1 1 auto;
 }
-//>>>>>> прижал футер 
-
-
+//>>>>>> прижал футер
 
 .container {
   margin: 0 auto;
