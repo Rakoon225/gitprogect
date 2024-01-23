@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "Header-app",
+  name: 'Header-app',
 };
 </script>
 
@@ -9,13 +9,16 @@ export default {
     <div class="container">
       <div class="header__content">
         <div class="header__left">
-           <el-logo class="header__title"> <!--компонент логотипа, изменён на h2, так как может использоваться несколько раз -->
-            <a href="/"> Logo</a>
+          <el-logo class="header__title">
+            <!--компонент логотипа, изменён на h2, так как может использоваться несколько раз -->
+            <router-link to="/"> Logo</router-link>
           </el-logo>
         </div>
         <div class="header__right">
           <nav class="header__menu header-menu">
-            <el-list class="header-menu__list" :array="this.$store.state.links" />
+            <el-list
+              class="header-menu__list"
+              :array="this.$store.state.links" />
           </nav>
         </div>
       </div>

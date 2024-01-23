@@ -1,13 +1,13 @@
 <script>
-import { RouterView } from "vue-router";
-import "@/assets/styles/styles.scss";
+import { RouterView } from 'vue-router';
+import '@/assets/styles/styles.scss';
 
-import HeaderApp from "./components/HeaderApp.vue";
-import FooterApp from "./components/FooterApp.vue";
+import HeaderApp from './components/HeaderApp.vue';
+import FooterApp from './components/FooterApp.vue';
 
 export default {
   components: { RouterView, HeaderApp, FooterApp },
-  name: "app",
+  name: 'app',
 };
 </script>
 
@@ -15,9 +15,9 @@ export default {
   <div class="wrapper">
     <header-app />
     <main>
-      <router-view></router-view>
+      <router-view />
     </main>
-    <footer-app></footer-app>
+    <footer-app />
   </div>
 </template>
 

@@ -1,24 +1,28 @@
 <script>
 export default {
-  name: "el-link",
+  name: 'el-link',
   props: {
-    param: { //размер лишки, пока что всего один - md
+    param: {
+      //размер лишки, пока что всего один - md
       type: String,
       required: false,
-      default: "md",
+      default: 'md',
     },
-    isActive: { //получаем состояние лишки - активная или неактивная
+    isActive: {
+      //получаем состояние лишки - активная или неактивная
       type: Boolean,
       required: true,
       default: false,
     },
-    href: { //этот пропс можно использовать для того, чтобы переходить на внешние ссылки
+    href: {
+      //этот пропс можно использовать для того, чтобы переходить на внешние ссылки
       type: String,
       required: false,
-      default: "#",
+      default: '#',
     },
   },
-  computed: { //так как вид лишки один, то нет необходимости создавать уникальный класс
+  computed: {
+    //так как вид лишки один, то нет необходимости создавать уникальный класс
     // returnClass() {
     //   return ["element", `element-${this.param}`];
     // },
@@ -27,20 +31,27 @@ export default {
 </script>
 
 <template>
- <a :href="href" class="element" :class="{ '--active': isActive }"><slot></slot></a>  <!-- непосредственно сама лишка -->
+  <a
+    href="href"
+    class="element"
+    :class="{ 'element--active': isActive }"
+    ><slot></slot
+  ></a>
+  <!-- непосредственно сама лишка -->
 </template>
 
 <style lang="scss" scoped>
 @use '@/assets/styles/utils' as v;
 
-.element { //стили и аниамация лишки
-  font-family: "sfuid";
+.element {
+  //стили и аниамация лишки
+  font-family: 'sfuid';
   color: v.$white;
   letter-spacing: v.em(1);
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     transition: width 0.5s;
     background-color: v.$white;
     position: absolute;
@@ -53,7 +64,7 @@ export default {
     width: 100%;
   }
 
-  &.--active {
+  &--active {
     color: v.$green2--h;
     &:active {
       color: v.$green1--a;
@@ -64,10 +75,10 @@ export default {
     }
   }
 
-  @media(min-width: v.em(576)){
+  @media (min-width: v.em(576)) {
     font-size: v.rem(20);
   }
-  @media(max-width: v.em(576)){
+  @media (max-width: v.em(576)) {
     font-size: v.rem(17);
   }
 }
