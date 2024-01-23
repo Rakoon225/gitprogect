@@ -1,22 +1,24 @@
 <script>
-import { RouterView } from 'vue-router';
-import '@/assets/styles/styles.scss';
+import { RouterView } from "vue-router";
+import "@/assets/styles/styles.scss";
 
-import HeaderApp from './components/HeaderApp.vue';
+import HeaderApp from "./components/HeaderApp.vue";
+import FooterApp from "./components/FooterApp.vue";
 
 export default {
-  components: { RouterView, HeaderApp },
-  name: 'app',
+  components: { RouterView, HeaderApp, FooterApp },
+  name: "app",
 };
 </script>
 
 <template>
-  <header-app />
-  <main>
-    <router-view></router-view>
-  </main>
+  <div class="wrapper">
+    <header-app />
+    <main>
+      <router-view></router-view>
+    </main>
+    <footer-app></footer-app>
+  </div>
 </template>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
