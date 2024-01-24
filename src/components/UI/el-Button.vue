@@ -11,13 +11,8 @@ export default {
   },
   computed: {
     returnClass() {
-      return ["element", `element-${this.param}`];
+      return ["button", `button-${this.param}`];
     },
-  },
-  methods: {
-    scrollToElement(to){
-
-    }
   }
 };
 </script>
@@ -51,7 +46,7 @@ $element-sizes: (
 );
 
 @each $name, $sizeMap in $element-sizes {
-  .element-#{$name} {
+  .button-#{$name} {
     @media (min-width: 576px) {
       padding: map-get($sizeMap, "padding-y") map-get($sizeMap, "padding-x");
       font-size: map-get($sizeMap, "font-size");
@@ -64,12 +59,11 @@ $element-sizes: (
   }
 }
 
-.element {
+.button {
   background-color: v.$green2;
 
   border-radius: 3px;
 
-  font-family: "sfuid";
   color: v.$green1;
 
   cursor: pointer;
