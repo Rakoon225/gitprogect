@@ -31,7 +31,8 @@ export default {
 .header {
   & {
     padding: v.em(20) 0 v.em(20) 0;
-    background: v.$black1--a; //изменил переменную, на мой взгляд, этот цвет подходит лучше
+    background: v.$black1--a;
+    z-index: 2; 
   }
   &__content {
     display: flex;

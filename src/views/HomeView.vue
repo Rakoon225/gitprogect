@@ -10,7 +10,7 @@ export default {
 
 <template>
   <first-block></first-block>
-  <services-block></services-block>
+  <!-- <services-block></services-block> -->
 </template>
 
 <style lang="scss" scoped></style>
