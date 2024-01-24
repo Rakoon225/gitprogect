@@ -22,7 +22,8 @@ export default {
   justify-content: center;
   align-items: start;
   padding: v.em(30) 0 v.em(70);
-  background: v.$black1--a; //изменил переменную, на мой взгляд, этот цвет подходит лучше
+  background: v.$black1--a; 
+  z-index: 2; 
 
   &-menu__list {
     list-style-type: none;

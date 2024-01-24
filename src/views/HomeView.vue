@@ -9,8 +9,8 @@ export default {
 </script>
 
 <template>
-  <first-block></first-block>
-  <services-block></services-block>
+  <first-block /> 
+  <!-- <services-block /> -->
 </template>
 
 <style lang="scss" scoped></style>
