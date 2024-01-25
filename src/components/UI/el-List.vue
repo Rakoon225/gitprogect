@@ -29,12 +29,10 @@ export default {
       v-for="(item, index) in array"
       @click="changeActive(index)">
       <!--рендерим лишки по списку -->
-      <el-link :isActive="this.active == index">
-        <!--компонент лишек -->
-        <router-link :to="`#${item.to}`">{{
-          item.name
-        }}</router-link>
-        <!-- роутер лишка, query -->
+      <el-link
+        :href="`#${item.to}`"
+        :isActive="this.active == index">
+        {{ item.name }}
       </el-link>
     </li>
   </ul>

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "FirstBlock",
+  name: 'FirstBlock',
 };
 </script>
 
@@ -10,11 +10,18 @@ export default {
       <div class="first__left">
         <div class="first__text">
           <h1 class="first__title">Создание веб-сайтов</h1>
-          <p class="first__description">профессиональная разработка и дизайн</p>
+          <p class="first__description"
+            >профессиональная разработка и дизайн</p
+          >
         </div>
-        <el-button class="first__button" :to="'services'">Услуги</el-button>
+        <el-button class="first__button" :to="'services'"
+          >Услуги</el-button
+        >
       </div>
-      <img src="@/assets/image/first/pngwing.com.png" alt="image" class="first__img" />
+      <img
+        src="@/assets/image/first/pngwing.com.png"
+        alt="image"
+        class="first__img" />
     </div>
   </section>
 </template>

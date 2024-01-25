@@ -18,7 +18,6 @@ export default {
       //этот пропс можно использовать для того, чтобы переходить на внешние ссылки
       type: String,
       required: false,
-      default: '#',
     },
   },
   computed: {
@@ -32,7 +31,8 @@ export default {
 
 <template>
   <a
-    href="href"
+    :href="href"
+    @click="console.log(`${href}`)"
     class="element"
     :class="{ 'element--active': isActive }"
     ><slot></slot

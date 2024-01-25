@@ -1,6 +1,12 @@
 <script>
+import { links } from '@/assets/statics/text';
 export default {
   name: 'Footer-app',
+  data() {
+    return {
+      links: links,
+    };
+  },
 };
 </script>
 
@@ -8,9 +14,7 @@ export default {
   <footer class="footer">
     <div class="footer__container container">
       <nav class="footer__menu footer-menu">
-        <el-list
-          class="footer-menu__list"
-          :array="this.$store.state.links" />
+        <el-list class="footer-menu__list" :array="links" />
         <!-- компонент листа -->
       </nav>
     </div>
@@ -25,8 +29,8 @@ export default {
   justify-content: center;
   align-items: start;
   padding: v.em(30) 0 v.em(70);
-  background: v.$black1--a; 
-  z-index: 2; 
+  background: v.$black1--a;
+  z-index: 2;
 
   &-menu__list {
     list-style-type: none;

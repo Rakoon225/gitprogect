@@ -1,6 +1,12 @@
 <script>
+import { links } from '@/assets/statics/text';
 export default {
   name: 'Header-app',
+  data() {
+    return {
+      links: links,
+    };
+  },
 };
 </script>
 
@@ -18,7 +24,7 @@ export default {
           <nav class="header__menu header-menu">
             <el-list
               class="header-menu__list"
-              :array="this.$store.state.links" />
+              :array="links" />
           </nav>
         </div>
       </div>
@@ -32,7 +38,7 @@ export default {
   & {
     padding: v.em(20) 0 v.em(20) 0;
     background: v.$black1--a;
-    z-index: 2; 
+    z-index: 2;
   }
   &__content {
     display: flex;

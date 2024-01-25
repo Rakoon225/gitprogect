@@ -1,36 +1,31 @@
 <script>
 export default {
-  name: "el-head",
+  name: 'el-head',
   props: {
     list: {
       type: Object,
       required: true,
-      default: []
-    }
-  }
+      default: [],
+    },
+  },
 };
 </script>
 
 <template>
   <div class="title">
-    <h2 class="title__main">{{list.main}}</h2>
-    <h3 class="title__sub">{{list.sub}}</h3>
+    <h2 class="title__main">{{ list.main }}</h2>
+    <h3 class="title__sub">{{ list.sub }}</h3>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @use '@/assets/styles/utils' as v;
 .title {
-  & {
-    text-align: center;
-    margin-bottom: v.em(35);
-    @media (max-width: v.em(465)) {
-      margin-bottom: v.em(25);
-    }
-    @media (max-width: v.em(320)) {
-      margin-bottom: v.em(25);
-    }
-  }
+  //! Вынес стили тайтла в компонент
+  // ServicesBlock, потому что у блока
+  // нельзя задавать отступы,
+  // влияющие на соседние блоки
+
   &__main {
     font-weight: 500;
     line-height: 1;
@@ -44,7 +39,7 @@ export default {
   &__sub {
     color: v.$green2--a;
     font-size: v.rem(15);
-    letter-spacing: v.em(1.5, 18);
+    letter-spacing: v.em(1.5, 15);
   }
 }
 </style>
