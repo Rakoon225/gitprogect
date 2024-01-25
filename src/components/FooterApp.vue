@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "Footer-app",
+  name: 'Footer-app',
 };
 </script>
 
@@ -8,7 +8,10 @@ export default {
   <footer class="footer">
     <div class="footer__container container">
       <nav class="footer__menu footer-menu">
-        <el-list class="footer-menu__list" :array="this.$store.state.links" /> <!-- компонент листа -->
+        <el-list
+          class="footer-menu__list"
+          :array="this.$store.state.links" />
+        <!-- компонент листа -->
       </nav>
     </div>
   </footer>

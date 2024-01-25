@@ -1,0 +1,18 @@
+@font-face {
+  font-display: swap;
+  font-family: "sfuid";
+  src: url("@/assets/fonts/SFUIDisplay-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-family: "sfuid";
+  src: url("@/assets/fonts/SFUIDisplay-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-family: "sfuid";
+  src: url("@/assets/fonts/SFUIDisplay-Light.ttf");
+  font-weight: 300;
+}
