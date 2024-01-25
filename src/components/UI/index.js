@@ -5,6 +5,7 @@ import elBlock from './el-Block.vue';
 import elLink from './el-Link.vue';
 import elLogo from './el-Logo.vue';
 import elList from './el-List.vue';
+import elHead from './el-Head.vue';
 
 export default [
   elButton,
@@ -14,4 +15,5 @@ export default [
   elLink,
   elLogo,
   elList,
+  elHead
 ];

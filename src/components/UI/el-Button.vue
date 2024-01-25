@@ -7,17 +7,18 @@ export default {
       required: false,
       default: "md",
     },
+    to: String
   },
   computed: {
     returnClass() {
-      return ["element", `element-${this.param}`];
+      return ["button", `button-${this.param}`];
     },
-  },
+  }
 };
 </script>
 
 <template>
-  <button :class="returnClass"><slot></slot></button>
+  <a :class="returnClass" :href="`#${to}`"><slot></slot></a>
 </template>
 
 <style lang="scss" scoped>
@@ -33,7 +34,7 @@ $element-sizes: (
   "md": (
     "padding-y": 3px,
     "padding-x": 40px,
-    "font-size": 22px,
+    "font-size": 23px,
     "font-weight": 400,
   ),
   "sm": (
@@ -45,7 +46,7 @@ $element-sizes: (
 );
 
 @each $name, $sizeMap in $element-sizes {
-  .element-#{$name} {
+  .button-#{$name} {
     @media (min-width: 576px) {
       padding: map-get($sizeMap, "padding-y") map-get($sizeMap, "padding-x");
       font-size: map-get($sizeMap, "font-size");
@@ -58,24 +59,21 @@ $element-sizes: (
   }
 }
 
-.element {
+.button {
   background-color: v.$green2;
 
-  border: 1px solid v.$green1;
-  border-radius: 2px;
+  border-radius: 3px;
 
-  font-family: "sfuid";
   color: v.$green1;
 
   cursor: pointer;
   transition: 0.2s;
 
   &:hover {
-    background-color: v.$green1--h;
-    color: v.$green2;
+    background-color: v.$green2--a;
   }
   &:active {
-    background-color: v.$green1--a;
+    background-color: v.$green2--h;
   }
 }
 </style>

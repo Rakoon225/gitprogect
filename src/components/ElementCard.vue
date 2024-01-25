@@ -40,8 +40,8 @@ defineProps({
     padding: 20px;
     background-color: v.$white;
     border-radius: 10px;
-  }
-  &__inner {
+
+    cursor: default;
   }
   &__image {
     > div {
