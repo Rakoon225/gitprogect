@@ -46,32 +46,27 @@ export default {
 .element {
   //стили и аниамация лишки
   font-family: 'sfuid';
-  color: v.$white;
+  color: v.$main-black;
   letter-spacing: v.em(1);
   position: relative;
-
+  font-weight: 500;
   &::after {
     content: '';
     transition: width 0.5s;
-    background-color: v.$white;
+    background-color: v.$main-black;
     position: absolute;
     top: v.em(25, 20);
     left: 0px;
     width: 0%;
-    height: 1px;
+    height: 2px;
   }
   &:hover::after {
     width: 100%;
   }
 
   &--active {
-    color: v.$green2--h;
-    &:active {
-      color: v.$green1--a;
-    }
     &::after {
       width: 50%;
-      background-color: v.$green2--h;
     }
   }
 

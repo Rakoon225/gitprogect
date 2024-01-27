@@ -16,7 +16,6 @@ defineProps({
     required: true,
   },
 });
-
 </script>
 <template>
   <div class="card" ref="element">
@@ -40,8 +39,11 @@ defineProps({
     padding: 20px;
     background-color: v.$white;
     border-radius: 10px;
-
+    border: 2px solid v.$grey-accent;
     cursor: default;
+    &:hover {
+      box-shadow: 10px 10px 10px v.$grey-accent;
+    }
   }
   &__image {
     > div {

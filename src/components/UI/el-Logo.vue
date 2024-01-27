@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "el-logo",
+  name: 'el-logo',
 };
 </script>
 
@@ -11,20 +11,15 @@ export default {
 <style lang="scss" scoped>
 @use '@/assets/styles/utils' as v;
 
-
 .element {
-  font-family: "sfuid";
-  font-weight: 500;
-  color: v.$white;
+  font-family: 'sfuid';
+  font-weight: 700;
+  color: v.$main-black;
 
-  &:hover{
-    color: v.$green2--h;
-  }
-
-  @media(min-width: 576px){
+  @media (min-width: 576px) {
     font-size: v.rem(28);
   }
-  @media(max-width: 576px){
+  @media (max-width: 576px) {
     font-size: v.rem(25);
   }
 }

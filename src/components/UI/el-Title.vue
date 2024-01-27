@@ -1,16 +1,16 @@
 <script>
 export default {
-  name: "el-title",
+  name: 'el-title',
   props: {
     param: {
       type: String,
       required: false,
-      default: "just",
+      default: 'just',
     },
   },
   computed: {
     returnClass() {
-      return ["element", `element-${this.param}`];
+      return ['element', `element-${this.param}`];
     },
   },
 };
@@ -24,36 +24,35 @@ export default {
 @use '@/assets/styles/utils' as v;
 
 $element-sizes: (
-  "main": (
-    "font-size": 37px,
-    "font-weight": 400,
-    "text-align": center,
-    "display": block,
+  'main': (
+    'font-size': 37px,
+    'font-weight': 400,
+    'display': block,
   ),
-  "just": (
-    "font-size": 20px,
-    "font-weight": 400,
+  'just': (
+    'font-size': 20px,
+    'font-weight': 400,
   ),
 );
 
 @each $name, $sizeMap in $element-sizes {
   .element-#{$name} {
-    text-align: map-get($sizeMap, "text-align");
-    display: map-get($sizeMap, "display");
+    display: map-get($sizeMap, 'display');
 
     @media (min-width: 576px) {
-      font-size: map-get($sizeMap, "font-size");
-      font-weight: map-get($sizeMap, "font-weight");
+      font-size: map-get($sizeMap, 'font-size');
+      font-weight: map-get($sizeMap, 'font-weight');
     }
     @media (max-width: 576px) {
-      font-size: calc(#{map-get($sizeMap, "font-size")} - 4px);
-      font-weight: map-get($sizeMap, "font-weight");
+      font-size: calc(
+        #{map-get($sizeMap, 'font-size')} - 4px
+      );
+      font-weight: map-get($sizeMap, 'font-weight');
     }
   }
 }
 
 .element {
-  font-family: "sfuid";
-  color: v.$green1;
+  color: v.$main-black;
 }
 </style>
