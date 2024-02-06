@@ -13,13 +13,25 @@ export default {
           <p class="first__description"
             >профессиональная разработка и дизайн</p
           >
+          <p class="first__description"
+            >профессиональная разработка и дизайн</p
+          >
+          <p class="first__description"
+            >профессиональная разработка и дизайн</p
+          >
+          <p class="first__description"
+            >профессиональная разработка и дизайн</p
+          >
         </div>
-        <el-button class="first__button" :to="'services'"
+        <el-button
+          :param="'lg'"
+          class="first__button"
+          :to="'services'"
           >Услуги</el-button
         >
       </div>
       <img
-        src="@/assets/image/first/pngwing.com.png"
+        src="https://static.tildacdn.com/tild6631-6561-4638-b131-373435633137/attractive-inspired-.jpg"
         alt="image"
         class="first__img" />
     </div>
@@ -31,14 +43,14 @@ export default {
 
 .first {
   & {
-    background-color: v.$green1--h;
+    // background-color: v.$green1--h;
     height: 70dvh;
-    padding: 50px 0;
+    padding: 50px 0 50px 0;
+    border-bottom: 1px solid v.$grey-accent;
   }
 
   &__container {
     display: flex;
-
     position: relative;
     height: 100%;
   }
@@ -66,8 +78,8 @@ export default {
   }
 
   &__title {
-    color: v.$green2;
-    font-weight: 500;
+    color: v.$main-black;
+    font-weight: 600;
 
     @media (min-width: v.em(576)) {
       font-size: v.rem(50);
@@ -78,7 +90,7 @@ export default {
   }
 
   &__description {
-    color: v.$green2--a;
+    color: v.$grey;
     font-weight: 300;
 
     @media (min-width: v.em(576)) {
@@ -94,7 +106,7 @@ export default {
     position: absolute;
     right: 0;
     z-index: 0;
-
+    border-radius: 8px;
     @media (min-width: v.em(576)) {
       align-self: center;
       width: 40%;

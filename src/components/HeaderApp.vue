@@ -5,19 +5,39 @@ export default {
   data() {
     return {
       links: links,
+      isFixedHeader: false,
     };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      if (window.scrollY > 100) {
+        this.isFixedHeader = true;
+      } else {
+        this.isFixedHeader = false;
+      }
+    },
   },
 };
 </script>
 
 <template>
-  <header class="header">
+  <header
+    :class="{
+      header: true,
+      'header--fixed': isFixedHeader,
+    }">
     <div class="container">
       <div class="header__content">
         <div class="header__left">
           <el-logo class="header__title">
             <!--компонент логотипа, изменён на h2, так как может использоваться несколько раз -->
-            <router-link to="/"> Logo</router-link>
+            <router-link to="/">Logo</router-link>
           </el-logo>
         </div>
         <div class="header__right">
@@ -37,15 +57,26 @@ export default {
 .header {
   & {
     padding: v.em(20) 0 v.em(20) 0;
-    background: v.$black1--a;
+    background: v.$white;
     z-index: 2;
+    transition-delay: 11200ms;
+    width: 100%;
+    border-bottom: 1px solid v.$grey-accent;
+    transition: all 0.6s;
+    // top: -450px;
+    // display: hidden;
+    position: fixed;
+    opacity: 0;
+  }
+  &--fixed {
+    opacity: 100%;
   }
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: v.em(450)) {
+    @media (max-width: v.em(576)) {
       gap: v.em(15);
       flex-direction: column;
     }
@@ -60,4 +91,5 @@ export default {
     }
   }
 }
+
 </style>

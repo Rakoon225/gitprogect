@@ -25,11 +25,11 @@ export default {
 @use '@/assets/styles/utils' as v;
 
 .footer {
+  border-top: 1px solid v.$grey-accent;
   display: flex;
   justify-content: center;
   align-items: start;
   padding: v.em(30) 0 v.em(70);
-  background: v.$black1--a;
   z-index: 2;
 
   &-menu__list {

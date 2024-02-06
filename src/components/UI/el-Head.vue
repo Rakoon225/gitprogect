@@ -26,18 +26,18 @@ export default {
   // нельзя задавать отступы,
   // влияющие на соседние блоки
 
+  color: v.$main-black;
   &__main {
     font-weight: 500;
     line-height: 1;
     font-size: v.rem(40);
-    color: v.$green2--h;
+    font-weight: 500;
     @media (max-width: v.em(320)) {
       line-height: 0.4;
       margin-bottom: v.em(5);
     }
   }
   &__sub {
-    color: v.$green2--a;
     font-size: v.rem(15);
     letter-spacing: v.em(1.5, 15);
   }

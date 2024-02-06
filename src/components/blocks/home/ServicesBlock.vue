@@ -35,7 +35,6 @@ export default {
 
 .services {
   & {
-    background-color: v.$green1--h;
     padding: v.em(30) 0 v.em(30) 0;
     min-height: 400px;
   }
