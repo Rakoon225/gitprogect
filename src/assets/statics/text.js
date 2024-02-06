@@ -64,3 +64,25 @@ export const cardsServices = [
       но и перешагнул в электронный дизайн.`,
   },
 ];
+// карточки контактов
+
+export const cardsContacts = [
+  {
+    name: "telegram",
+    title: "Телеграм",
+    link: "youtube.ru",
+    text: "" 
+  },
+  {
+    name: "whatsapp",
+    title: "Ватсапп",
+    link: "youtube.ru",
+    text: "" 
+  },
+  {
+    name: "email",
+    title: "Почта",
+    link: "youtube.ru",
+    text: "" 
+  },
+];

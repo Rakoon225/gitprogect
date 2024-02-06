@@ -31,6 +31,7 @@ export default {
   align-items: start;
   padding: v.em(30) 0 v.em(70);
   z-index: 2;
+  margin-top: v.rem(60);
 
   &-menu__list {
     list-style-type: none;
