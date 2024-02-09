@@ -37,7 +37,7 @@ defineProps({
     min-height: 300px;
     max-width: 300px;
     padding: 20px;
-    background-color: v.$white;
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     border: 2px solid v.$grey-accent;
     cursor: default;

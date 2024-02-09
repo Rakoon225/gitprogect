@@ -63,8 +63,6 @@ export default {
     width: 100%;
     border-bottom: 1px solid v.$grey-accent;
     transition: all 0.6s;
-    // top: -450px;
-    // display: hidden;
     position: fixed;
     opacity: 0;
   }
