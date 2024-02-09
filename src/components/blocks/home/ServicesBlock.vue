@@ -31,7 +31,7 @@ export default {
   </section>
 </template>
 <style lang="scss">
-@use '@/assets/styles/utils' as v;
+@use '@/assets/styles/utils/' as v;
 
 .services {
   & {

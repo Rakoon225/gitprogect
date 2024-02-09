@@ -13,6 +13,7 @@ export default {
   <first-block />
   <services-block />
   <contact-block />
+
 </template>
 
 <style lang="scss" scoped></style>
