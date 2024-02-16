@@ -1,3 +1,16 @@
+<script>
+import TechnologiesCard from '@/components/TechnologiesCard.vue';
+import { technologies } from '@/assets/statics/text';
+export default {
+  name: 'Technologies',
+  components: { TechnologiesCard },
+  data() {
+    return {
+      technologies: technologies,
+    };
+  },
+};
+</script>
 <style lang="scss">
 @use '@/assets/styles/utils/' as v;
 
@@ -17,10 +30,16 @@
     }
   }
   &__cards {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+    // gap: 20px;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    flex-wrap: wrap;
+    @media(max-width: v.em(965)){
+      grid-template-columns: auto;
+    }
   }
 }
 </style>
@@ -34,13 +53,10 @@
           sub: 'чаще всего используем в проектах',
         }"></el-head>
       <div class="technologies__cards">
-        <el-card
-          v-for="card in cardsServices"
+        <technologies-card
+          v-for="card in technologies"
           :card="card" />
       </div>
     </div>
   </section>
 </template>
-<script>
-export default {};
-</script>
