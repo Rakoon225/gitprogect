@@ -37,6 +37,7 @@ export default {
   & {
     padding: v.em(30) 0 v.em(30) 0;
     min-height: 400px;
+    border-bottom: 1px solid v.$grey-accent;
   }
   &__title {
     text-align: center;
