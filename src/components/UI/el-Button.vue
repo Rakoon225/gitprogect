@@ -75,6 +75,7 @@ $element-sizes: (
 
   &:hover {
     background-color: v.$blue-accent;
+     border-radius: 3px;
   }
   &:active {
     background-color: v.$blue-accent;

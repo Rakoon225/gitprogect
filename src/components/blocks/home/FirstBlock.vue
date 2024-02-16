@@ -43,7 +43,6 @@ export default {
 
 .first {
   & {
-    // background-color: v.$green1--h;
     height: 70dvh;
     padding: 50px 0 50px 0;
     border-bottom: 1px solid v.$grey-accent;

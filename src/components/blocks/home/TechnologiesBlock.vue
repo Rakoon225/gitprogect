@@ -1,3 +1,10 @@
+<script>
+export default {
+  name: 'TechnologiesBlock',
+  components: { ElCard: ElementCard },
+};
+</script>
+
 <style lang="scss">
 @use '@/assets/styles/utils/' as v;
 
@@ -41,6 +48,3 @@
     </div>
   </section>
 </template>
-<script>
-export default {};
-</script>
