@@ -33,7 +33,7 @@ export default {
     font-size: v.rem(40);
     font-weight: 500;
     @media (max-width: v.em(320)) {
-      line-height: 0.4;
+      line-height: 0.7;
       margin-bottom: v.em(5);
     }
   }

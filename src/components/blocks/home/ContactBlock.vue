@@ -17,7 +17,7 @@ export default {
   <section id="contacts" class="contacts">
     <div class="contacts__container">
       <el-head
-        class="services__title"
+        class="contacts__title"
         :list="{
           main: 'Наши контакты',
           sub: 'обратная связь',
@@ -37,7 +37,9 @@ export default {
 .contacts {
   & {
     display: flex;
+    padding: 30px 0;
     justify-content: center;
+    border-bottom: 1px solid v.$grey-accent;
   }
   &__body {
     display: flex;
@@ -55,8 +57,8 @@ export default {
       row-gap: 10px;
     }
   }
-  &__title-header {
-    margin-top: 30px;
+  &__title {
+    text-align: center;
   }
 }
 </style>

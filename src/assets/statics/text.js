@@ -68,21 +68,48 @@ export const cardsServices = [
 
 export const cardsContacts = [
   {
-    name: "telegram",
-    title: "Телеграм",
-    link: "youtube.ru",
-    text: "" 
+    name: 'telegram',
+    title: 'Телеграм',
+    link: 'youtube.ru',
+    text: '',
   },
   {
-    name: "whatsapp",
-    title: "Ватсапп",
-    link: "youtube.ru",
-    text: "" 
+    name: 'whatsapp',
+    title: 'Ватсапп',
+    link: 'youtube.ru',
+    text: '',
   },
   {
-    name: "email",
-    title: "Почта",
-    link: "youtube.ru",
-    text: "" 
+    name: 'email',
+    title: 'Почта',
+    link: 'youtube.ru',
+    text: '',
+  },
+];
+
+export const technologies = [
+  {
+    name: 'sass',
+    text: 'SASS/SCSS - SCSS - это препроцессорный язык, который расширяет функциональность обычного CSS. Он позволяет использовать переменные, миксины, вложенные селекторы и другие возможности, упрощая процесс стилизации веб-страниц. ',
+    gradient:
+      'linear-gradient(135deg, #FF57B9 0%,#A704FD 100%)',
+  },
+  {
+    name: 'vue',
+    text: 'VUE - это прогрессивный javascript-фреймворк для создания пользовательских интерфейсов и одностраничных приложений.',
+    gradient:
+      'linear-gradient(135deg, #c3ec52 0%,#0ba29d 100%)',
+  },
+  {
+    name: 'html',
+    text: 'HTML - это стандартный язык разметки для создания и структурирования веб-страниц. Он используется для определения содержимого страницы, включая текст, изображения, ссылки и другие элементы, которые браузеры могут отображать пользователю',
+    gradient:
+      'linear-gradient(135deg, #fad961 0%,#f76b1c 100%)',
+  },
+  {
+    name: 'css',
+    text: 'CSS - это язык стилей, используемый для оформления и внешнего оформления веб-страниц',
+    gradient:
+      'linear-gradient(135deg, #13f1fc 0%,#0470dc 100%)',
   },
 ];
