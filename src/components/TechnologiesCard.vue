@@ -1,7 +1,7 @@
 <script setup>
-import VanillaTilt from 'vanilla-tilt';
+import VanillaTilt from "vanilla-tilt";
 
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from "vue";
 const element = ref(null);
 
 onMounted(() => {
@@ -24,22 +24,22 @@ defineProps({
       :style="{
         background: card.gradient,
       }"
-      class="card__inner">
+      class="card__inner"
+    >
       <div class="card__content">
         <div class="card__image-group">
           <img
-            :src="
-              require(`@/assets/image/technologies/${card.name}.png`)
-            "
-            alt="icon" />
+            :src="require(`@/assets/image/technologies/${card.name}.png`)"
+            alt="icon"
+          />
         </div>
       </div>
-      <div class="card__text card-text">
-        <h2 class="card-text__title">{{ card.name }}</h2>
-        <p class="card-text__description">
-          {{ card.text }}</p
-        >
-      </div>
+      <!-- <div class="card__text card-text"> -->
+      <h2 class="card__title">{{ card.name }}</h2>
+      <p class="card__description">
+        {{ card.text }}
+      </p>
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -53,24 +53,41 @@ defineProps({
   border-radius: 20px;
   padding: 1px;
   min-height: 200px;
+
   &__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: v.em(10);
+
     width: 100%;
-    gap: v.rem(30);
     border-radius: 20px;
-    padding: v.em(20) v.em(16);
-    flex-direction: row;
+    padding: v.em(16);
+
     @media (min-width: v.em(576)) {
-      padding-left: v.em(48);
-      padding-right: v.em(48);
+      grid-template-areas:
+        "image title"
+        "image text";
+
+      padding: v.em(20) v.em(28);
+    }
+    @media (max-width: v.em(576)) {
+      grid-template-areas:
+        "image title"
+        "text text";
+
+      padding: v.em(20);
     }
   }
+
   &__content {
     margin: 0 auto;
+    grid-area: image;
     @media (min-width: v.em(980)) {
       margin: 0;
     }
   }
+
   &__image-group {
     position: relative;
     img {
@@ -94,9 +111,9 @@ defineProps({
       }
     }
   }
-}
-.card-text {
+
   &__title {
+    grid-area: title;
     text-transform: uppercase;
     border-radius: 20px;
     text-align: center;
@@ -104,12 +121,28 @@ defineProps({
     color: v.$white;
     transition: all 0.4s;
 
-    font: {
-      size: v.rem(35);
-      weight: 800;
+    height: max-content;
+    margin: auto;
+
+    @media (min-width: v.em(576)) {
+      width: 200px;
+      padding: 10px 20px;
+      font: {
+        size: v.rem(35);
+        weight: 800;
+      }
+    }
+    @media (max-width: v.em(576)) {
+      width: 120px;
+      padding: 5px 10px;
+      font: {
+        size: v.rem(23);
+        weight: 800;
+      }
     }
   }
   &__description {
+    grid-area: text;
     max-width: 350px;
     color: v.$white;
     margin: v.em(12) 0;
