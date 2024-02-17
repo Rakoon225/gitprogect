@@ -3,6 +3,11 @@
   transition: 0.2s;
 }
 
+:target {
+  scroll-margin-top: 100px; /* размер отступа */
+}
+
+
 //<<<<<
 html {
   min-height: 100%;

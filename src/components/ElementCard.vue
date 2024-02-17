@@ -21,11 +21,11 @@ defineProps({
   <div class="card" ref="element">
     <div class="card__inner">
       <div class="card__image">
-        <div></div>
+        <img src="@/assets/image/contact/telegram__photo.jpg" alt="">
       </div>
       <div class="card__text">
         <h5 class="card__title">{{ card.title }}</h5>
-        {{ card.text }}
+        <p class="card__description">{{ card.text }}</p>
       </div>
     </div>
   </div>
@@ -46,12 +46,10 @@ defineProps({
     }
   }
   &__image {
-    > div {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: v.$black2;
-      //   text-align: center;
+    > img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
       margin: 0 auto v.em(15) auto;
     }
   }
@@ -60,5 +58,6 @@ defineProps({
     font-size: v.rem(25);
     margin-bottom: v.em(10, 25);
   }
+
 }
 </style>

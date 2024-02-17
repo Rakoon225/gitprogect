@@ -37,7 +37,7 @@ export default {
         <div class="header__left">
           <el-logo class="header__title">
             <!--компонент логотипа, изменён на h2, так как может использоваться несколько раз -->
-            <router-link to="/">Logo</router-link>
+            <router-link to="/">Zoomers</router-link>
           </el-logo>
         </div>
         <div class="header__right">

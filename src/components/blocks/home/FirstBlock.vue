@@ -11,16 +11,7 @@ export default {
         <div class="first__text">
           <h1 class="first__title">Создание веб-сайтов</h1>
           <p class="first__description"
-            >профессиональная разработка и дизайн</p
-          >
-          <p class="first__description"
-            >профессиональная разработка и дизайн</p
-          >
-          <p class="first__description"
-            >профессиональная разработка и дизайн</p
-          >
-          <p class="first__description"
-            >профессиональная разработка и дизайн</p
+            >В нашей дружной команде создаются красивые сайты и макеты, которые отличаются качеством и удобством использования</p
           >
         </div>
         <el-button
@@ -31,7 +22,7 @@ export default {
         >
       </div>
       <img
-        src="https://static.tildacdn.com/tild6631-6561-4638-b131-373435633137/attractive-inspired-.jpg"
+        src="@/assets/image/first/pngwing.com.png"
         alt="image"
         class="first__img" />
     </div>
@@ -64,6 +55,10 @@ export default {
     @media (max-width: v.em(576)) {
       align-self: start;
     }
+    @media (max-width: v.em(768)) {
+      margin: auto;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -94,10 +89,12 @@ export default {
 
     @media (min-width: v.em(576)) {
       font-size: v.rem(24);
+      max-width: v.em(350);
+      margin-top: v.rem(11);
     }
     @media (max-width: v.em(576)) {
       font-size: v.rem(20);
-      margin-top: 8px;
+      margin-top: v.rem(12);
     }
   }
 
@@ -113,6 +110,9 @@ export default {
     @media (max-width: v.em(576)) {
       align-self: flex-end;
       width: 80%;
+    }
+    @media (max-width: v.em(768)) {
+      display: none;
     }
   }
 }
