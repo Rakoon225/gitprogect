@@ -14,7 +14,8 @@ export default {
 <template>
   <div class="title">
     <h2 class="title__main">{{ list.main }}</h2>
-    <h3 class="title__sub">{{ list.sub }}</h3>
+    <h3 class="title__sub">Rakoons</h3>
+    <!-- <h3 class="title__sub">{{ list.sub }}</h3> -->
   </div>
 </template>
 

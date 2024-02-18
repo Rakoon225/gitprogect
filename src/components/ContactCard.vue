@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'ContactCard',
+  name: "ContactCard",
   props: {
     item: {
       type: Object,
@@ -14,27 +14,22 @@ export default {
   <article class="contacts__card">
     <div class="contacts__card-container">
       <img
-        :src="
-          require(`@/assets/image/contact/${item.name}.png`)
-        "
+        :src="require(`@/assets/image/contact/${item.name}.png`)"
         alt="иконка соцсетей"
-        class="contacts__card-img" />
+        class="contacts__card-img"
+      />
       <div class="contacts__card-body">
-        <h2 class="contacts__card-title">{{
-          item.title
-        }}</h2>
-        <button class="contacts__card-btn">
-          <span v-if="item.link">Написать</span>
-          <!-- <span v-else>{{ card.text }}</span>  -->
-        </button>
+        <h2 class="contacts__card-title">{{ item.title }}</h2>
+        <a :href="item.link" class="contacts__card-btn" v-if="item.link" role="button">
+          Написать
+        </a>
       </div>
     </div>
     <img
-      :src="
-        require(`@/assets/image/contact/${item.name}__photo.jpg`)
-      "
+      :src="require(`@/assets/image/contact/${item.name}__photo.jpg`)"
       alt="Картинка шариков"
-      class="contacts__card-background" />
+      class="contacts__card-background"
+    />
   </article>
 </template>
 
@@ -53,15 +48,15 @@ export default {
 
     @media (max-width: v.em(576)) {
       min-width: 100%;
-      border-radius: 0px !important;
+      border-radius: 0 !important;
     }
 
     @media (min-width: v.em(1024)) {
       &:nth-child(3n + 5),
       &:nth-child(2) {
         border: {
-          left: v.rem(2) x solid v.$grey;
-          right: v.rem(2) solid v.$grey;
+          // left: v.rem(2) x solid v.$grey;
+          // right: v.rem(2) solid v.$grey;
           radius: 0;
         }
       }
@@ -106,6 +101,7 @@ export default {
   }
 
   &-btn {
+    display: block;
     padding: v.rem(7) v.rem(45);
     border: v.rem(1) solid v.$white;
     color: v.$white;

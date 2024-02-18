@@ -50,7 +50,7 @@ export default {
       <el-head
         class="technologies__title"
         :list="{
-          main: 'Наши технологии',
+          main: 'Технологии',
           sub: 'чаще всего используем в проектах',
         }"></el-head>
       <div class="technologies__cards">

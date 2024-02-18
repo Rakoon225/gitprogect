@@ -4,7 +4,7 @@
 }
 
 :target {
-  scroll-margin-top: 100px; /* размер отступа */
+  scroll-margin-top: v.em(100); /* размер отступа */
 }
 
 
@@ -34,7 +34,7 @@ main {
 
 .container {
   margin: 0 auto;
-  padding: 0px 15px;
+  padding: v.em(0) v.em(15);
 
   @media (min-width: v.em(768)) {
     max-width: v.rem(1230);

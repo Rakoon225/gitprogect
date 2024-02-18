@@ -46,13 +46,14 @@ defineProps({
 <style lang="scss" scoped>
 @use '@/assets/styles/utils' as v;
 .card {
+  cursor: default;
   font: {
     size: v.rem(16);
   }
   width: 100%;
   border-radius: 20px;
   padding: 1px;
-  min-height: 200px;
+  min-height: v.rem(200);
 
   &__inner {
     display: grid;
@@ -91,7 +92,7 @@ defineProps({
   &__image-group {
     position: relative;
     img {
-      width: 300px;
+      width: v.rem(300);
       max-width: 100%;
       border-radius: 20px;
     }
@@ -125,16 +126,16 @@ defineProps({
     margin: auto;
 
     @media (min-width: v.em(576)) {
-      width: 200px;
-      padding: 10px 20px;
+      width: v.rem(200);
+      padding: v.em(10) v.em(20);
       font: {
         size: v.rem(35);
         weight: 800;
       }
     }
     @media (max-width: v.em(576)) {
-      width: 120px;
-      padding: 5px 10px;
+      width: v.rem(120);
+      padding: v.em(5) v.em(10);
       font: {
         size: v.rem(23);
         weight: 800;
