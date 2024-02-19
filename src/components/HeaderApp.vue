@@ -67,6 +67,10 @@ export default {
     transition: all 0.6s;
     position: fixed;
     opacity: 0;
+
+    @media (max-width: v.em(576)) {
+      padding: v.em(5) 0 v.em(13) 0;
+    }
   }
   &--fixed {
     opacity: 100%;
@@ -77,7 +81,7 @@ export default {
     align-items: center;
 
     @media (max-width: v.em(576)) {
-      gap: v.em(15);
+      gap: v.em(0);
       flex-direction: column;
     }
   }
