@@ -24,8 +24,10 @@ export default {
         }"></el-head>
       <div class="services__cards">
         <el-card
-          v-for="card in cardsServices"
-          :card="card" />
+          v-for="(card, index) in cardsServices"
+          :card="card"
+          :index="index"
+          :key="index" />
       </div>
     </div>
   </section>

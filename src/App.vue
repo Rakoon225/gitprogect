@@ -1,5 +1,6 @@
 <script>
 import { RouterView } from 'vue-router';
+
 import '@/assets/styles/styles.scss';
 
 import HeaderApp from './components/HeaderApp.vue';

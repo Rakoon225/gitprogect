@@ -1,17 +1,39 @@
-<script>
-export default {
-  name: "ContactCard",
-  props: {
-    item: {
-      type: Object,
-      requier: true,
-    },
+<script setup>
+import VanillaTilt from "vanilla-tilt";
+
+import { onMounted, ref, toRefs } from "vue";
+
+import { useSlideIn } from "@/hooks/useSlideMotion.js";
+
+const props = defineProps({
+  item: {
+    type: Object,
+    requier: true,
   },
-};
+  index: {
+    type: Number,
+    default: true,
+  },
+});
+
+const { item, index } = toRefs(props);
+const element = ref(null);
+
+onMounted(() => {
+  useSlideIn(
+    element,
+    index.value % 2 === 0 ? "right" : "left",
+    (((index.value + (index.value % 2) === 0 ? 10 : 20) * 250) / 2) * 0.6
+  );
+  VanillaTilt.init(element.value, {
+    max: 10,
+    speed: 200,
+  });
+});
 </script>
 
 <template>
-  <article class="contacts__card">
+  <article class="contacts__card" ref="element">
     <div class="contacts__card-container">
       <img
         :src="require(`@/assets/image/contact/${item.name}.png`)"

@@ -55,8 +55,8 @@ export default {
         }"></el-head>
       <div class="technologies__cards">
         <technologies-card
-          v-for="card in technologies"
-          :card="card" />
+          v-for="(card,index) in technologies"
+          :card="card" :index="index" />
       </div>
     </div>
   </section>

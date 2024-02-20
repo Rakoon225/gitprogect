@@ -1,18 +1,27 @@
 <script>
 export default {
   name: 'el-head',
-  props: {
-    list: {
-      type: Object,
-      required: true,
-      default: [],
-    },
-  },
 };
+</script>
+<script setup>
+import { defineProps, onMounted, ref } from 'vue';
+import { useSlideText } from '@/hooks/useSlideMotion.js';
+defineProps({
+  list: {
+    type: Object,
+    required: true,
+    default: [],
+  },
+});
+const targetText = ref();
+
+onMounted(() => {
+  useSlideText(targetText, 500);
+});
 </script>
 
 <template>
-  <div class="title">
+  <div ref="targetText" class="title">
     <h2 class="title__main">{{ list.main }}</h2>
     <h3 class="title__sub">raccoons</h3>
     <!-- <h3 class="title__sub">{{ list.sub }}</h3> -->

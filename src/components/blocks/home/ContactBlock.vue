@@ -24,8 +24,8 @@ export default {
         }"></el-head>
       <div class="contacts__body">
         <contact-card
-          v-for="card in cardsContacts"
-          :item="card"></contact-card>
+          v-for="(card, index) in cardsContacts"
+          :item="card" :index="index"></contact-card>
       </div>
     </div>
   </section>

@@ -1,17 +1,24 @@
-<script>
-export default {
-  name: 'FirstBlock',
-};
+<script setup>
+import { ref, onMounted } from 'vue';
+import { useSlideIn } from '@/hooks/useSlideMotion.js';
+const targetText = ref();
+const targetImg = ref();
+onMounted(() => {
+  useSlideIn(targetText, 'right', 200);
+  useSlideIn(targetImg, 'left', 500);
+});
 </script>
 
 <template>
   <section class="first" id="main">
     <div class="first__container container">
-      <div class="first__left">
+      <div class="first__left" ref="targetText">
         <div class="first__text">
           <h1 class="first__title">Создание веб-сайтов</h1>
           <p class="first__description"
-            >В нашей дружной команде создаются красивые сайты и макеты, которые отличаются качеством и удобством использования</p
+            >В нашей дружной команде создаются красивые
+            сайты и макеты, которые отличаются качеством и
+            удобством использования</p
           >
         </div>
         <el-button
@@ -22,6 +29,7 @@ export default {
         >
       </div>
       <img
+        ref="targetImg"
         src="@/assets/image/first/pngwing.com.png"
         alt="image"
         class="first__img" />
