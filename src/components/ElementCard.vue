@@ -17,7 +17,6 @@ const props = defineProps({
   },
 });
 const { card, index } = toRefs(props);
-
 const element = ref(null);
 
 onMounted(() => {

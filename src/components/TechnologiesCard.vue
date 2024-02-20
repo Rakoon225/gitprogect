@@ -1,22 +1,39 @@
 <script setup>
 import VanillaTilt from "vanilla-tilt";
 
-import { onMounted, ref } from "vue";
+import { onMounted, ref, toRefs } from "vue";
+
+import { useSlideIn } from '@/hooks/useSlideMotion.js';
+
+const props = defineProps({
+  card: {
+    type: Object,
+    required: true,
+  },
+  index: {
+    type: Number,
+    default: true,
+  },
+});
+
+const { card, index } = toRefs(props);
 const element = ref(null);
 
 onMounted(() => {
+  useSlideIn(
+    element,
+    index.value % 2 === 0 ? 'right' : 'left',
+    (((index.value + (index.value % 2) === 0 ? 10 : 20) *
+      250) /
+      2) *
+      0.6
+  );
   VanillaTilt.init(element.value, {
     max: 10,
     speed: 200,
   });
 });
 
-defineProps({
-  card: {
-    type: Object,
-    required: true,
-  },
-});
 </script>
 <template>
   <div class="card" ref="element">

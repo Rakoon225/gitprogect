@@ -6,12 +6,10 @@ import {
 import { useMotion } from '@vueuse/motion';
 
 export const useSlideIn = (target, direction, delay) => {
-  console.log(delay);
   const options = slideMotion(direction, delay);
   useMotion(target, options);
 };
 export const useSpec = (target, direction, delay) => {
-  console.log(direction);
   // const options = slideMotion(direction, delay);
   // useMotion(target, options);
 };

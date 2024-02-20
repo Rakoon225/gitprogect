@@ -1,17 +1,17 @@
-<script>
+<script setup>
+import { ref, onMounted } from 'vue';
 import { links } from '@/assets/statics/text';
-export default {
-  name: 'Footer-app',
-  data() {
-    return {
-      links: links,
-    };
-  },
-};
+import { useSlideIn } from '@/hooks/useSlideMotion.js';
+const targetFooter = ref();
+onMounted(() => {
+  useSlideIn(targetFooter, 'right', 200);
+});
+
+
 </script>
 
 <template>
-  <footer class="footer">
+  <footer class="footer" ref="targetFooter">
     <div class="footer__container container">
       <nav class="footer__menu footer-menu">
         <el-list class="footer-menu__list" :array="links" />
