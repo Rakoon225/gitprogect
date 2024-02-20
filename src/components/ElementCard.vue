@@ -1,20 +1,39 @@
 <script setup>
-import VanillaTilt from "vanilla-tilt";
-import { onMounted, ref } from "vue";
+import VanillaTilt from 'vanilla-tilt';
+import {
+  useSlideIn,
+  useSpec,
+} from '@/hooks/useSlideMotion.js';
+import { onMounted, ref, toRefs } from 'vue';
+const props = defineProps({
+  card: {
+    type: Object,
+    required: true,
+    default: true,
+  },
+  index: {
+    type: Number,
+    default: true,
+  },
+});
+const { card, index } = toRefs(props);
+
 const element = ref(null);
 
 onMounted(() => {
+  useSlideIn(
+    element,
+    index.value % 2 === 0 ? 'right' : 'left',
+    (((index.value + (index.value % 2) === 0 ? 10 : 20) *
+      250) /
+      2) *
+      0.6
+  );
+
   VanillaTilt.init(element.value, {
     max: 10,
     speed: 200,
   });
-});
-
-defineProps({
-  card: {
-    type: Object,
-    required: true,
-  },
 });
 </script>
 <template>
@@ -22,7 +41,11 @@ defineProps({
     <div class="card" ref="element">
       <div class="card__inner">
         <div class="card__image">
-          <img :src="require(`@/assets/image/card/${card.key}.svg`)" alt="" />
+          <img
+            :src="
+              require(`@/assets/image/card/${card.key}.svg`)
+            "
+            alt="" />
         </div>
         <div class="card__text">
           <h5 class="card__title">{{ card.title }}</h5>
@@ -43,8 +66,15 @@ defineProps({
     border-radius: 10px;
     border: 2px solid v.$grey-accent;
     cursor: default;
-    &:hover {
-      box-shadow: 10px 10px 10px v.$grey-accent;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 10px 10px 10px v.$grey-accent;
+      }
+    }
+    @media (hover: none) {
+      &:hover {
+        box-shadow: 10px 10px 10px v.$grey-accent;
+      }
     }
   }
   &__image {
