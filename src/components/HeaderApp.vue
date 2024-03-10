@@ -10,7 +10,6 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
-
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -24,7 +23,6 @@ export default {
       }
     },
   },
-  
 };
 </script>
 
@@ -37,10 +35,10 @@ export default {
     <div class="container">
       <div class="header__content">
         <div class="header__left">
-            <!--компонент логотипа, изменён на h2, так как может использоваться несколько раз -->
-            <a href="#main">
-              <el-logo class="header__title"> </el-logo>
-            </a>
+          <!--компонент логотипа, изменён на h2, так как может использоваться несколько раз -->
+          <a href="#main">
+            <el-logo class="header__title"> </el-logo>
+          </a>
         </div>
         <div class="header__right">
           <nav class="header__menu header-menu">
@@ -56,6 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '@/assets/styles/utils' as v;
+
 .header {
   & {
     padding: v.em(20) 0 v.em(20) 0;
@@ -95,5 +94,4 @@ export default {
     }
   }
 }
-
 </style>
