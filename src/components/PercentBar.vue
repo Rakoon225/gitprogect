@@ -14,6 +14,7 @@ const percent = usePercentScroll();
 <style lang="scss" scoped>
 @use '@/assets/styles/utils' as v;
 .percent-bar {
-  height: v.$white;
+  height: v.em(10);
+  color: v.$white;
 }
 </style>

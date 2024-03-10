@@ -65,16 +65,16 @@ onMounted(() => {
     border-radius: 10px;
     border: 2px solid v.$grey-accent;
     cursor: default;
-    @media (hover: hover) {
-      &:hover {
-        box-shadow: 10px 10px 10px v.$grey-accent;
-      }
-    }
-    @media (hover: none) {
-      &:hover {
-        box-shadow: 10px 10px 10px v.$grey-accent;
-      }
-    }
+    // @media (hover: hover) {
+    //   &:hover {
+    //     box-shadow: 10px 10px 10px v.$grey-accent;
+    //   }
+    // }
+    // @media (hover: none) {
+    //   &:hover {
+    //     box-shadow: 10px 10px 10px v.$grey-accent;
+    //   }
+    // }
   }
   &__image {
     display: flex;
